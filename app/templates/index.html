@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="/static/js/moment.min.js"></script>
+
+
+<div class="container">
+	<div class="row">
+		<form method="POST">
+			<div class="form-group row">
+				<div class="col-md-8">
+                    {{form.search(class_="form-control")}}
+				</div>
+				<div class="col-md-2">
+                	<button type="submit" class="btn btn-success">Проверить ping</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+Время: {{ momentjs(timestamp).format('YYYY-MM-DD HH:mm:ss') }}<br>
+Версия: {{ version }}<br>
+
+{% if form.search.data %}
+ping {{form.search.data}} = {{ pong }}
+{% endif %}
+{% endblock %}

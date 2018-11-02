@@ -1,0 +1,22 @@
+#/usr/lib/systemd/system/flask_web_service.service
+
+[Unit]
+Description=Flask Web Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+EnvironmentFile=/etc/sysconfig/flask_web_service
+User=python
+Group=python
+Type=simple
+Restart=on-failure
+WorkingDirectory=PATH_TO_DIR
+ExecStart=PATH_TO_DIR/startservice.sh
+
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target
+
+

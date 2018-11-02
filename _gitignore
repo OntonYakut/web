@@ -1,0 +1,6 @@
+*.rpyc
+*.pyc
+logs
+logs/
+logs/*
+app/static/files/departments.txt

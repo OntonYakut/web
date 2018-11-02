@@ -1,0 +1,32 @@
+#graph
+{
+   position:relative;	
+   width:660px;
+   height:216px;
+   margin:3px;
+   padding:0;
+}
+
+#graph li
+{
+   position:absolute;	
+   list-style:none;
+   background:lightblue;
+   width:40px;
+   text-align:center;
+   border:1px solid black;
+   visibility: hidden;
+   background-image:url(/static/img/bar-shaded.png);
+   background-repeat:repeat-y;
+}
+
+#graph ul
+{
+   position:absolute;
+   top:0;
+   left:30px;
+   width:600px;
+   height:200px;
+   border-left:1px solid black;
+   border-bottom:1px solid black;
+}
